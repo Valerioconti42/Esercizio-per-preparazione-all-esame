@@ -1,0 +1,6 @@
+Medico(🚩Idm, Nome, Cognome, Spec, Idr*)
+Reparto(🚩Idr, Nome, Piano)
+Paziente(🚩Idp, Nome, Cognome, D_o_B, Idr*)
+Visita(🚩Idv, Ora, Data, F_card, P_max, P_min, Temp, Note, Salute, Idp*, Idm*)
+Farmaco(🚩Idf, Nome, Principio)
+Prescrizione(🚩Idv*,🚩Idf*, Posologia)
