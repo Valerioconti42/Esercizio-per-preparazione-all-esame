@@ -1,0 +1,88 @@
+
+        /* Sfondo azzurro ospedaliero */
+        body {
+            background-color: #f4f7f9;
+            background-image: radial-gradient(#d1e3f0 1px, transparent 1px);
+            background-size: 20px 20px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .login-box {
+            width: 380px;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 50, 100, 0.1);
+            border-top: 6px solid #00a8cc;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 22px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2::before {
+            content: "+";
+            color: #e74c3c;
+            font-size: 28px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        label {
+            font-weight: 600;
+            color: #546e7a;
+            font-size: 13px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input, select {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            box-sizing: border-box;
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #00a8cc;
+            background-color: #fff;
+            box-shadow: 0 0 8px rgba(0, 168, 204, 0.2);
+        }
+
+        button {
+            width: 100%;
+            background-color: #00a8cc;
+            color: white;
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 168, 204, 0.3);
+        }
+
+        button:hover {
+            background-color: #008ba8;
+            transform: translateY(-2px);
+        }
