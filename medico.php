@@ -31,13 +31,13 @@
                         }
                     
                         // Eseguo la query sulla tabella VINO con i JOIN corretti
-                        $sql = "SELECT IdP, Nome
+                        $sql = "SELECT Idp, Nome
                                 FROM Paziente;";
                         $ris = mysqli_query($conn, $sql);
                         if (mysqli_num_rows($ris) > 0) {
                                             while($riga = mysqli_fetch_assoc($ris)) {
                                                 echo "<td>" . htmlspecialchars($riga["Nome"]) . "</td>";
-                                                echo '<option value="'.htmlspecialchars($riga["IdP"]).'">'.htmlspecialchars($riga["NomeP"]).'</option>';
+                                                echo '<option value="'.htmlspecialchars($riga["Idp"]).'">'.htmlspecialchars($riga["NomeP"]).'</option>';
                                             }
                         }
                         ?>
