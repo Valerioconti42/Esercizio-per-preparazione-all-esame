@@ -2,132 +2,130 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-	
     <title>Login Ospedale</title>
-	
     <style>
-        body { font-family: Arial, sans-serif; display: flex; justify-content: center; margin-top: 50px; background-color: #f0f2f5; }
-        .login-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; }
-        input, select, button { width: 100%; margin-bottom: 15px; padding: 10px; box-sizing: border-box; }
-        button { background-color: #007bff; color: white; border: none; cursor: pointer; border-radius: 4px; }
-        button:hover { background-color: #0056b3; }
-		
-		body {
-    /* Sfondo azzurro ospedaliero molto chiaro */
-    background-color: #f4f7f9;
-    background-image: radial-gradient(#d1e3f0 1px, transparent 1px);
-    background-size: 20px 20px; /* Effetto trama tecnica */
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
+        /* Sfondo azzurro ospedaliero */
+        body {
+            background-color: #f4f7f9;
+            background-image: radial-gradient(#d1e3f0 1px, transparent 1px);
+            background-size: 20px 20px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-.login-box {
-    width: 380px;
-    padding: 40px;
-    background: #ffffff;
-    border-radius: 12px;
-    /* Ombra decisa ma pulita */
-    box-shadow: 0 15px 35px rgba(0, 50, 100, 0.1);
-    border-top: 6px solid #00a8cc; /* Barra superiore colore "chirurgico" */
-}
+        .login-box {
+            width: 380px;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 50, 100, 0.1);
+            border-top: 6px solid #00a8cc;
+        }
 
-h2 {
-    color: #2c3e50;
-    font-size: 24px;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        h2 {
+            color: #2c3e50;
+            font-size: 22px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-/* Simbolo della croce medica generato via CSS prima del titolo */
-h2::before {
-    content: "+";
-    color: #e74c3c;
-    font-size: 30px;
-    margin-right: 10px;
-    font-weight: bold;
-}
+        h2::before {
+            content: "+";
+            color: #e74c3c;
+            font-size: 28px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
 
-label {
-    font-weight: 600;
-    color: #546e7a;
-    font-size: 13px;
-    margin-bottom: 8px;
-    display: block;
-}
+        label {
+            font-weight: 600;
+            color: #546e7a;
+            font-size: 13px;
+            margin-bottom: 8px;
+            display: block;
+        }
 
-input, select {
-    background-color: #f8fafc;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 16px;
-    color: #334155;
-    transition: all 0.3s ease;
-}
+        input, select {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            box-sizing: border-box;
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
 
-input:focus, select:focus {
-    outline: none;
-    border-color: #00a8cc;
-    background-color: #fff;
-    box-shadow: 0 0 8px rgba(0, 168, 204, 0.2);
-}
+        input:focus, select:focus {
+            outline: none;
+            border-color: #00a8cc;
+            background-color: #fff;
+            box-shadow: 0 0 8px rgba(0, 168, 204, 0.2);
+        }
 
-button {
-    background-color: #00a8cc; /* Blu ciano professionale */
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 14px;
-    margin-top: 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 168, 204, 0.3);
-}
+        button {
+            width: 100%;
+            background-color: #00a8cc;
+            color: white;
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 168, 204, 0.3);
+        }
 
-button:hover {
-    background-color: #008ba8;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 168, 204, 0.4);
-}
-
-/* Stile specifico per il selettore del ruolo */
-select {
-    cursor: pointer;
-    appearance: none; /* Rimuove lo stile di default */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://w3.org' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 1em;
-}
-
-
+        button:hover {
+            background-color: #008ba8;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
 
 <div class="login-box">
-    <h2>Accesso Sistema</h2>
-    <form action="Seleziona_Paziente.php" method="POST">
-        <label>Username:</label>
-        <input type="text" name="user" required>
-        
-        <label>Password:</label>
-        <input type="password" name="pass" required>
+    <h2>Accesso Gestionale</h2>
+    <h3>Benvenuto:</h3>
+    <!-- L'action di default è medico.php -->
+    <form id="loginForm" action="medico.php" method="POST">
         
         <label>Tipo Utente:</label>
-        <select name="ruolo" required>
+        <select name="ruolo" id="ruolo" onchange="cambiaDestinazione()" required>
             <option value="medico">Medico</option>
-            <option value="paziente">Paziente</option>
+            <option value="farmacista">Farmacista</option>
         </select>
         
-        <button type="submit">Accedi</button>
+        <button type="submit">Accedi al Sistema</button>
     </form>
 </div>
+
+<script>
+    function cambiaDestinazione() {
+        const ruolo = document.getElementById('ruolo').value;
+        const form = document.getElementById('loginForm');
+        
+        if (ruolo === 'farmacista') {
+            form.action = 'farmacista.php';
+        } else {
+            form.action = 'medico.php';
+        }
+        
+        // Log di controllo (opzionale)
+        console.log("Il modulo invierà i dati a: " + form.action);
+    }
+</script>
 
 </body>
 </html>
