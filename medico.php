@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<Titlte> Gestione Ospedale </title>
+	<Titlte> Gestione Ospedale </title>
+	<link rel="stylesheet" href="style. css">
 </head>
 
 <body>
