@@ -6,7 +6,7 @@
 
 <body>
 <h1> Ospedale </h1>
-<h2> Gestione Farmaci prescritti </h2>
+<h2> Gestione Farmaci Prescritti </h2>
 <form action="Visualizza_pazienti.php" method="POST">
  
  <?php
