@@ -6,6 +6,13 @@
 </head>
 
 <body>
+	<div>
+		<nav>
+			<a href="medico.php">Home</a>
+		</nav>
+
+		
+	</div>
 <h1> Ospedale </h1>
 <h2> Gestione cartelle cliniche pazienti</h2>
 
